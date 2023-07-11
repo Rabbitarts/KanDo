@@ -15,7 +15,7 @@ const Auth: FC = () => {
 			const { error } = await supabase.auth.signInWithOAuth({
 				provider: 'github',
 				options: {
-					redirectTo: 'http://localhost:5173/Kanban'
+					redirectTo: 'https://kando.onrender.com/Kanban'
 				}
 			})
 
