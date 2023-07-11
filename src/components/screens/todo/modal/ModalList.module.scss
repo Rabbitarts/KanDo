@@ -1,0 +1,52 @@
+.modal {
+	@apply fixed inset-0 flex items-center justify-center bg-black/30;
+
+	.content {
+		@apply w-[500px] rounded-lg bg-white p-4;
+
+		.header {
+			@apply mb-6 flex items-center justify-between;
+
+			.title {
+				@apply text-lg font-semibold;
+			}
+		}
+
+
+		.form {
+			@apply flex flex-col gap-4;
+
+			.task {
+				@apply rounded-lg border border-gray-300 px-4 py-2 outline-none transition-colors duration-200 focus:border-[#4FBE9F];
+			}
+
+			.save {
+				@apply flex items-center gap-3 bg-[#4FBE9F] transition-colors duration-200 px-4 py-2 rounded-lg ml-auto text-white;
+			}
+		}
+
+		.delete {
+			@apply border border-gray-400 rounded-lg px-4 py-2 transition-colors duration-200 hover:border-red-500 hover:text-red-500;
+		}
+
+		animation: fadeIn 0.4s ease-in-out;
+	}
+}
+
+.loading {
+	@apply animate-spin w-5 h-5 relative border-2 border-solid border-gray-200 border-t-2 border-t-gray-600 rounded-full;
+}
+
+@keyframes fadeIn {
+	from {
+		transform: scale(0.6);
+	}
+
+	80% {
+		transform: scale(1.1);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}

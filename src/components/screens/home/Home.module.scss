@@ -1,0 +1,13 @@
+.home {
+	@apply px-8 py-6;
+
+	.title {
+		@apply mb-6 text-2xl font-semibold;
+
+		span {
+			@apply text-[#4FBE9F];
+		}
+	}
+
+	
+}

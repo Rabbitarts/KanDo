@@ -1,0 +1,26 @@
+.auth {
+	@apply p-8;
+
+	.title {
+		@apply mb-2 text-3xl font-semibold;
+	}
+
+	.description {
+		@apply mb-4 text-lg;
+	}
+
+	.btnCon {
+		@apply flex flex-col gap-4;
+
+		.github {
+			@apply flex items-center justify-center gap-3 rounded-lg border-2 px-4 py-2 font-medium transition-colors duration-300 hover:border-[#4FBE9F];
+		}
+		.ToRegister {
+			@apply rounded-lg border-2 px-4 py-2 transition-colors duration-300 hover:border-[#4FBE9F];
+
+			.signUp {
+				@apply flex items-center justify-center gap-3 text-center font-medium;
+			}
+		}
+	}
+}

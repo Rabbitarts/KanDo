@@ -1,0 +1,44 @@
+.modal {
+	@apply fixed inset-0 flex items-center justify-center bg-black/30;
+
+	.content {
+		@apply h-[400px] w-[600px] rounded-xl bg-white p-8 z-10;
+
+		.header {
+			@apply mb-6 flex items-center justify-between;
+
+			.title {
+				@apply text-xl font-semibold;
+			}
+		}
+
+		.form {
+			@apply mb-4 flex flex-col gap-5;
+
+			.boardTitle {
+				@apply rounded-lg border border-gray-300 px-4 py-2 outline-none transition-colors duration-200 focus:border-[#4FBE9F];
+			}
+
+			.save {
+				@apply ml-auto flex w-[25%]  justify-center rounded-lg bg-[#4FBE9F] px-4 py-2 text-white;
+			}
+		}
+
+		.delete {
+			@apply rounded-lg border border-gray-300 px-4 py-2 transition-all duration-300 hover:border-[#4FBE9F];
+		}
+
+		animation: fadeIn 0.2s ease-in-out;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

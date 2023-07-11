@@ -1,0 +1,51 @@
+.profile {
+	@apply flex-1 px-10 py-6;
+
+	.title {
+		@apply text-3xl font-semibold;
+	}
+
+	.form {
+		@apply mt-6 flex flex-col gap-5;
+
+		.inputCon {
+			@apply flex flex-col;
+
+			.label {
+				@apply mb-2;
+			}
+
+			.emailInput {
+				@apply cursor-not-allowed rounded-lg border px-4 py-2 focus:outline-[#4FBE9F];
+			}
+
+			.input {
+				@apply rounded-lg border px-4 py-2 focus:outline-[#4FBE9F];
+			}
+		}
+
+		.updateBtn {
+			@apply rounded-lg bg-[#4FBE9F] px-5 py-2 text-white transition duration-300 hover:bg-[#55ccaa];
+		}
+	}
+}
+
+.avatarCon {
+	@apply mb-2;
+
+	.avatar {
+		@apply mb-4 rounded-full border-[3px] border-[#4fbe9f] p-1;
+	}
+
+	.noImage {
+		@apply text-gray-700;
+	}
+
+	.uploadInput {
+		@apply invisible absolute;
+	}
+
+	.upload {
+		@apply cursor-pointer rounded-lg bg-[#4fbe9f] px-5 py-2 text-white transition duration-300 hover:bg-[#55ccaa];
+	}
+}

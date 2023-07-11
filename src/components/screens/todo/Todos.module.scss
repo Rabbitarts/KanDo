@@ -1,0 +1,80 @@
+.list {
+	@apply container px-10 py-8;
+
+	.header {
+		@apply mb-4 flex items-center justify-between;
+
+		.title {
+			@apply text-2xl font-semibold;
+		}
+
+		.openBtn {
+			@apply rounded-lg bg-[#4FBE9F] px-4 py-2 text-white hover:bg-[#53c8a7];
+		}
+	}
+
+	.addForm {
+		@apply mb-6 flex items-center gap-3;
+
+		.input {
+			@apply rounded-lg border border-gray-300 px-4 py-2 outline-none transition duration-200 focus:border-[#4FBE9F];
+		}
+
+		.addBtn {
+			@apply flex items-center justify-center rounded-full bg-[#4FBE9F] p-2 text-white transition duration-200 hover:bg-[#47ad91];
+		}
+	}
+
+	.todos {
+		@apply w-1/2 rounded-lg bg-[#F2F2F2] p-4 shadow;
+
+		.wrapper {
+			@apply flex justify-between;
+
+			.left {
+				@apply flex items-center gap-5;
+			}
+	
+			.right {
+				@apply flex items-center gap-3;
+	
+				.menu {
+					@apply text-gray-500 opacity-0 transition-all duration-200 hover:text-[#4FBE9F];
+				}
+	
+				.delete {
+					@apply text-gray-500 opacity-0 transition-all duration-200 hover:text-red-500;
+				}
+			}
+	
+			&:hover > .right > .delete {
+				@apply opacity-100;
+			}
+			&:hover > .right > .menu {
+				@apply opacity-100;
+			}
+		}
+
+		// .badgeCon {
+		// 	@apply flex flex-wrap ml-11 mt-2;
+
+		// 	.badge {
+		// 		@apply  bg-[#EBE7FF] text-[#927cff] px-1.5 py-1 rounded-xl text-[14px];
+		// 	}
+		// }
+
+
+		animation: findIn ease-in-out 0.6s;
+	}
+}
+
+@keyframes findIn {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

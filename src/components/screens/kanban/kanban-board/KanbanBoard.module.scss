@@ -1,0 +1,17 @@
+.boardContainer {
+	@apply flex h-[90%] max-w-[1494px] gap-5 overflow-x-auto;
+
+	&::-webkit-scrollbar {
+		height: 8px;
+	}
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #dedede;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: #888;
+	}
+}

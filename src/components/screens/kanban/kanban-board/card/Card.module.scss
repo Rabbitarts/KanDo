@@ -1,0 +1,62 @@
+.card {
+	@apply mt-2 rounded-lg bg-white px-4 py-3 shadow;
+
+	.menuIcon {
+		@apply ml-auto text-gray-800 opacity-0 transition-opacity duration-300;
+	}
+
+	.downMenu {
+		@apply flex items-end;
+
+		.tags {
+			@apply mt-2 flex flex-wrap gap-2;
+
+			.tag {
+				@apply flex items-center gap-1 rounded-md px-2 py-0.5 text-[14px] text-white;
+			}
+		}
+	}
+
+	.completionStatus {
+		@apply flex items-center gap-1 text-[14px] text-gray-700;
+	}
+
+	&:hover > .downMenu > .menuIcon {
+		@apply opacity-100;
+	}
+
+	&.dragging {
+		@apply border border-[#4FBE9F];
+		box-shadow: 2px 4px 0px rgba(#4fbe9f, 0.5);
+	}
+
+	animation: pulsate 0.6s ease-in-out;
+}
+
+.addCard {
+	@apply mt-4;
+
+	.input {
+		@apply rounded-lg border border-gray-300 bg-none px-4 py-2 outline-none focus:border-[#4FBE9F];
+	}
+
+	.create {
+		@apply rounded-full bg-[#4FBE9F] p-2 text-white;
+	}
+
+	.add {
+		@apply flex w-full items-center justify-center gap-3 rounded-lg border border-gray-200 bg-white py-2 font-medium text-gray-500 shadow-sm;
+	}
+}
+
+@keyframes pulsate {
+	0% {
+		transform: translateY(15px);
+	}
+	80% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

@@ -1,0 +1,27 @@
+.register {
+	@apply w-[26rem];
+
+	.title {
+		@apply mb-2 text-lg font-semibold;
+	}
+
+	.description {
+		@apply text-base;
+	}
+
+	.form {
+		@apply my-6 flex flex-col gap-4;
+
+		.inputCon {
+			@apply flex flex-col gap-2;
+
+			.input {
+				@apply rounded-lg border-2 px-4 py-2 outline-none transition-all duration-300 hover:border-[#4FBE9F] focus:border-[#4FBE9F];
+			}
+		}
+
+		.registerBtn {
+			@apply rounded-lg bg-[#4FBE9F] px-4 py-2 text-white transition-all duration-300 hover:bg-[#55cfac];
+		}
+	}
+}

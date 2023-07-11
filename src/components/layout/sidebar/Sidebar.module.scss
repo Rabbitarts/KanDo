@@ -1,0 +1,63 @@
+.sidebar {
+	@apply flex h-screen w-[18%] flex-col border-r-2 border-[#EFEFEF] px-5 py-5;
+
+	.logo {
+		@apply pl-2;
+	}
+
+	.menu {
+		@apply mt-10 flex-grow;
+
+		ul {
+			li {
+				@apply mb-2 text-lg font-semibold;
+
+				.sideLink {
+					@apply relative flex items-center gap-3 rounded-lg px-4 py-4 text-slate-600;
+
+					.sideIcon {
+						@apply text-slate-700;
+					}
+
+					&.active {
+						@apply bg-[#F2F2F2] text-black;
+					}
+
+					&::before {
+						@apply absolute -left-5 top-0 h-full w-1 -translate-x-1 rounded-lg bg-[#4FBE9F] opacity-0 transition-all duration-300;
+						content: '';
+					}
+
+					&:hover::before {
+						@apply translate-x-0 opacity-100;
+					}
+				}
+
+				&:last-child {
+					@apply mb-0;
+				}
+			}
+		}
+
+		.menuTitle {
+			@apply pl-4 text-base uppercase text-gray-500;
+		}
+	}
+
+	.logout {
+		@apply relative flex items-center gap-3 p-4 text-left text-lg font-semibold text-slate-600 transition duration-200;
+
+		.logIcon {
+			@apply text-slate-700;
+		}
+
+		&::before {
+			@apply absolute -left-5 top-0 h-full w-1 -translate-x-1 rounded-lg bg-[#4FBE9F] opacity-0 transition-all duration-300;
+			content: '';
+		}
+
+		&:hover::before {
+			@apply translate-x-0 opacity-100;
+		}
+	}
+}

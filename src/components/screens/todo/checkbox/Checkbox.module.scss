@@ -1,0 +1,12 @@
+.checkbox-icon {
+	@apply transition-all duration-300;
+}
+
+.checkIcon {
+	@apply rounded-lg bg-[#4FBE9F] p-1 text-white transition-colors duration-300;
+}
+
+.checkedIcon {
+	@apply rounded-lg border-2 border-[#4FBE9F] p-2.5;
+	content: '';
+}

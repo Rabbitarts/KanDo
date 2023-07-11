@@ -1,0 +1,60 @@
+.board {
+	@apply w-80 rounded-lg bg-[#F2F2F2] px-2 py-4;
+
+	.header {
+		@apply flex items-center justify-between;
+
+		.title {
+			@apply mb-2 flex items-center gap-3 rounded-lg px-3 py-1 pl-0 font-semibold;
+		}
+
+		.titleIcon {
+			@apply text-[#aaa9ad];
+		}
+
+		.menuBtn {
+			@apply text-gray-700;
+		}
+	}
+
+	&.dragging {
+		@apply border border-[#4FBE9F];
+		box-shadow: 2px 4px 0px rgba(#4fbe9f, 0.5);
+	}
+}
+
+.AddBoard {
+	.input {
+		@apply rounded-lg border px-4 py-2 focus:outline-[#4FBE9F];
+	}
+
+	.create {
+		@apply rounded-full bg-[#4FBE9F] p-2 text-white;
+	}
+
+	.add {
+		@apply flex w-52 items-center justify-center gap-3 rounded-lg border border-gray-300 py-2 font-semibold transition-all duration-300 hover:border-[#4FBE9F];
+	}
+}
+
+.cardContainer {
+	@apply max-h-[700px] overflow-y-auto pb-2.5 pr-[4px] transition-colors duration-300;
+
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #dedede;
+		border-radius: 5px;
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background: #888;
+	}
+
+	&.droppable {
+		@apply bg-gray-200;
+	}
+}

@@ -1,0 +1,19 @@
+.profile {
+	@apply relative flex items-center gap-4;
+
+	.avatar {
+		@apply h-14 w-14 rounded-full border-2 border-[#4fbe9f] p-1;
+	}
+
+	.username {
+		@apply text-base font-semibold;
+	}
+
+	.noImage {
+		@apply text-gray-600;
+	}
+
+	.chevronUp {
+		@apply rotate-180 transform transition-all duration-300;
+	}
+}

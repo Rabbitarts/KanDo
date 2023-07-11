@@ -1,0 +1,34 @@
+Todo
+- KanDo: Harmony Hub
+[] - Kanban board in /kanban page 
+	 [] - Column
+   [] - Kard in column
+
+[x] - sidebar + routes in map() + typescript
+
+[] - drag && drop functional on column boards
+
+[] - comment functional on Kard in Column
+
+- Styles 
+[x] - yarn add -D tailwind css
+[x] - install node-sass or yarn add sass
+[x] - module.scss files in project! 
+example: {
+	import styles from './style.module.scss' 
+	className={styles.title} 	
+}
+
+[x] - font-family: 'Titilium Web'
+
+- Icons for project {
+	yarn add react-icons
+	[
+		List - BsViewList,
+		Kanban - HiOutlineViewColumns
+		Team: - LiaUserFriendsSolid
+		Comment: - FaCommentAlt
+	]
+}
+
+[] - Theme: Default: Light - Dark

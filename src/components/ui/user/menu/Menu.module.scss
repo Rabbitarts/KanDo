@@ -1,0 +1,11 @@
+.menu {
+	@apply absolute right-0 top-14 w-36 rounded-lg bg-[#F2F2F2] py-2 shadow;
+
+	.menuBtn {
+		@apply flex h-8 items-center gap-2 px-4 py-2 font-medium transition-all duration-300;
+
+		.icon {
+			@apply text-gray-700;
+		}
+	}
+}

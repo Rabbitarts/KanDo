@@ -1,0 +1,68 @@
+.modal {
+	@apply fixed inset-0 flex items-center justify-center bg-black/30;
+
+	.content {
+		@apply z-50 w-[600px] rounded-lg bg-white p-4;
+		animation: scaleIn 0.2s ease-in-out;
+
+		.header {
+			@apply mb-6 flex items-center justify-between;
+
+			.title {
+				@apply text-xl font-semibold text-gray-800;
+			}
+
+			.close {
+				@apply text-gray-700;
+			}
+		}
+
+		.form {
+			@apply flex flex-col gap-4;
+
+			.taskInput {
+				@apply h-44 resize-none rounded-lg border border-gray-300 px-4 py-2 outline-none transition-colors duration-200 hover:border-[#4FBE9F];
+			}
+
+			.save {
+				@apply ml-auto flex rounded-lg bg-[#4FBE9F] px-4 py-2 text-white transition-colors duration-200 hover:bg-[#49b194];
+			}
+		}
+
+		.delete {
+			@apply rounded-lg border border-gray-300 px-4 py-2 text-gray-700 transition-colors duration-300 hover:border-red-500 hover:text-red-500;
+		}
+
+		.tags {
+			@apply mb-4 flex flex-wrap gap-3;
+
+			.tag {
+				@apply flex items-center gap-1 rounded-lg px-3 py-1 text-white;
+			}
+		}
+
+		.addTagContainer {
+			@apply mb-8 flex flex-col gap-4;
+
+			.addTagInput {
+				@apply rounded-lg border border-gray-300 px-4 py-2 outline-none transition-colors hover:border-[#4FBE9F];
+			}
+
+			.addTagBtn {
+				@apply mr-auto rounded-lg bg-[#4FBE9F] px-4 py-1 text-white;
+			}
+		}
+	}
+}
+
+@keyframes scaleIn {
+	from {
+		transform: scale(0.6);
+	}
+	80% {
+		transform: scale(1.1);
+	}
+	to {
+		transform: scale(1);
+	}
+}
