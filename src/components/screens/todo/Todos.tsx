@@ -7,7 +7,6 @@ import { supabase } from '@/supabase/server'
 import { ITodo } from '@/types/todo.types'
 
 const List: FC = () => {
-	const [task, setTask] = useState<string>('')
 	const [todos, setTodos] = useState<ITodo[]>([])
 
 	useEffect(() => {
@@ -42,8 +41,6 @@ const List: FC = () => {
 
 			setTodos([result.data, ...todos])
 		}
-
-		setTask('')
 	}
 
 	const updateTodo = async (todo: ITodo) => {
